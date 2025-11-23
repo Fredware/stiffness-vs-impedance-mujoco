@@ -1,0 +1,17 @@
+[workspace]
+name = "stiffness_vs_impedance"
+version = "0.1.0"
+description = "Comparing Stiffness vs Impedance control for peg-in-hole insertion in MuJoCo"
+authors = ["Fredi Mino <fredi.mino@utah.edu>"]
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
+
+[dependencies]
+python= "3.12.*"
+mujoco = ">=3.0.0"
+numpy = "*"
+
+[tasks]
+# Tasks are like Makefiles or npm scripts. They run inside the Pixi environment.
+# Instead of typing "pixi run python scripts/main.py", you can just type "pixi run sim"
+sim = "python scripts/main.py"
